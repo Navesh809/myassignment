@@ -40,7 +40,13 @@ int main() {
         } else {
             cout << "\nInvalid choice. Please select a number between 1 and 5.\n";
         }
-        
+        char continueOption;
+        cout << "\nWould you like to explore another category? (y/n): ";
+        cin >> continueOption;
+
+        if (continueOption != 'y' && continueOption != 'Y') {
+            break;
+        }
     }
     return 0;
 }
