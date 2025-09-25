@@ -48,5 +48,6 @@ int main() {
             break;
         }
     }
+    cout << "\n*****Thank you for using the Amazon Prime Movie Recommender!*****\n";
     return 0;
 }
