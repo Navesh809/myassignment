@@ -1,33 +1,33 @@
 #include <iostream>
 #include <string>
 using namespace std;
-struct Film {
-    string name;    
-    int length;     
-    double score;   
+struct Film { // struct to store film information
+    string name;// to store film name    
+    int length; // to store film duration    
+    double score; // to store film rating  
 };
 int main() {
-    string categories[5] = {"Action", "Comedy", "Drama", "Horror", "Sci-Fi"};
+    string categories[5] = {"Action", "Comedy", "Drama", "Horror", "Sci-Fi"}; // array to store film catagories
 
     Film filmList[5][4] = {
         { {"Mad Max: Fury Road", 120, 8.1}, {"John Wick", 110, 7.4}, {"The Dark Knight", 152, 9.0}, {"Avengers: Endgame", 181, 8.4} },
         { {"The Hangover", 100, 7.7}, {"Superbad", 113, 7.6}, {"Step Brothers", 98, 6.9}, {"Jumanji: Welcome to the Jungle", 119, 6.9} },
         { {"The Shawshank Redemption", 142, 9.3}, {"Forrest Gump", 144, 8.8}, {"The Pursuit of Happyness", 117, 8.0}, {"A Beautiful Mind", 135, 8.2} },
         { {"The Conjuring", 112, 7.5}, {"It", 135, 7.3}, {"A Quiet Place", 90, 7.5}, {"Annabelle", 99, 5.4} },
-        { {"Inception", 148, 8.8}, {"Interstellar", 169, 8.6}, {"The Matrix", 136, 8.7}, {"Blade Runner 2049", 164, 8.0} }
+        { {"Inception", 148, 8.8}, {"Interstellar", 169, 8.6}, {"The Matrix", 136, 8.7}, {"Blade Runner 2049", 164, 8.0} }//array to store movies , duration and rating
     };
-    while (true) {
+    while (true) {//while loop to repeat the genre selection
         // Show main menu
         cout << "\n***** Amazon Prime Movie Recommender *****\n";
         cout << "Available Categories:\n";
         for (int i = 0; i < 5; i++) {
-            cout << "  " << (i + 1) << ". " << categories[i] << endl;
+            cout << "  " << (i + 1) << ". " << categories[i] << endl;// for loop to loop through movie categories
         }
         int userChoice;
         cout << "\nEnter your choice (1-5): ";
         cin >> userChoice;
 
-        if (userChoice >= 1 && userChoice <= 5) {
+        if (userChoice >= 1 && userChoice <= 5) { // function to print out movies based on user selection
             cout << "\nMovies in " << categories[userChoice - 1] << " \n";
             cout << "---------------------------------------------\n";
             for (int j = 0; j < 4; j++) {
@@ -38,7 +38,7 @@ int main() {
                 cout << "---------------------------------------------\n";
             }
         } else {
-            cout << "\nInvalid choice. Please select a number between 1 and 5.\n";
+            cout << "\nInvalid choice. Please select a number between 1 and 5.\n";// error message if user selects a number other than 1 - 5
         }
         char continueOption;
         cout << "\nWould you like to explore another category? (y/n): ";
@@ -49,5 +49,5 @@ int main() {
         }
     }
     cout << "\n*****Thank you for using the Amazon Prime Movie Recommender!*****\n";
-    return 0;
+    return 0;// end of program
 }
