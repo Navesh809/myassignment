@@ -16,6 +16,15 @@ int main() {
         { {"The Conjuring", 112, 7.5}, {"It", 135, 7.3}, {"A Quiet Place", 90, 7.5}, {"Annabelle", 99, 5.4} },
         { {"Inception", 148, 8.8}, {"Interstellar", 169, 8.6}, {"The Matrix", 136, 8.7}, {"Blade Runner 2049", 164, 8.0} }
     };
-    
+    while (true) {
+        // Show main menu
+        cout << "\n***** Amazon Prime Movie Recommender *****\n";
+        cout << "Available Categories:\n";
+        for (int i = 0; i < 5; i++) {
+            cout << "  " << (i + 1) << ". " << categories[i] << endl;
+        }
+
+        
+    }
     return 0;
 }
