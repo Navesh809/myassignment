@@ -23,7 +23,23 @@ int main() {
         for (int i = 0; i < 5; i++) {
             cout << "  " << (i + 1) << ". " << categories[i] << endl;
         }
+        int userChoice;
+        cout << "\nEnter your choice (1-5): ";
+        cin >> userChoice;
 
+        if (userChoice >= 1 && userChoice <= 5) {
+            cout << "\nMovies in " << categories[userChoice - 1] << " \n";
+            cout << "---------------------------------------------\n";
+            for (int j = 0; j < 4; j++) {
+                cout << "Movie #" << j + 1 << "\n";
+                cout << "Title   : " << filmList[userChoice - 1][j].name << "\n";
+                cout << "Length  : " << filmList[userChoice - 1][j].length << " minutes\n";
+                cout << "Rating  : " << filmList[userChoice - 1][j].score << "/10\n";
+                cout << "---------------------------------------------\n";
+            }
+        } else {
+            cout << "\nInvalid choice. Please select a number between 1 and 5.\n";
+        }
         
     }
     return 0;
