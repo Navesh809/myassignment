@@ -7,9 +7,9 @@ struct Film { // struct to store film information
     double score; // to store film rating  
 };
 int main() {
-    string categories[5] = {"Action", "Comedy", "Drama", "Horror", "Sci-Fi"}; // array to store film catagories
+    string categories[6] = {"Action", "Comedy", "Drama", "Horror", "Sci-Fi", "Romance"}; // array to store film catagories
 
- Film filmList[5][10] = {
+ Film filmList[6][10] = {
         { // action
             {"Mad Max: Fury Road", 120, 8.1},
             {"John Wick", 110, 7.4},
@@ -69,20 +69,32 @@ int main() {
             {"Hellboy", 116, 6.9},
             {"Back To The Future", 111, 8.5},
             {"Godzilla", 133, 5.5}
+        },
+        { // romance
+            {"The Notebook", 123, 7.8},
+            {"Titanic", 195, 7.9},
+            {"La La Land", 128, 8.0},
+            {"Pride & Prejudice", 129, 7.8},
+            {"Crazy Rich Asians", 120, 7.0},
+            {"Me Before You", 110, 7.4},
+            {"A Star is Born", 136, 7.6},
+            {"To All the Boys I've Loved Before", 99, 7.1},
+            {"Notting Hill", 124, 7.2},
+            {"The Fault in Our Stars", 126, 7.7}
         }
     };
     while (true) {//while loop to repeat the genre selection
         // Show main menu
         cout << "\n***** Amazon Prime Movie Recommender *****\n";
         cout << "Available Categories:\n";
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 6; i++) {
             cout << "  " << (i + 1) << ". " << categories[i] << endl;// for loop to loop through movie categories
         }
         int userChoice;
-        cout << "\nEnter your choice (1-5): ";
+        cout << "\nEnter your choice (1-6): ";
         cin >> userChoice;
 
-        if (userChoice >= 1 && userChoice <= 5) { // function to print out movies based on user selection
+        if (userChoice >= 1 && userChoice <= 6) { // function to print out movies based on user selection
             cout << "\nMovies in " << categories[userChoice - 1] << " \n";
             cout << "---------------------------------------------\n";
             for (int j = 0; j < 10; j++) {
