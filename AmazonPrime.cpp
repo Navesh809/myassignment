@@ -9,7 +9,7 @@ struct Film { // struct to store film information
 int main() {
     string categories[6] = {"Action", "Comedy", "Drama", "Horror", "Sci-Fi", "Romance"}; // array to store film catagories
 
- Film filmList[6][10] = {
+ Film filmList[6][11] = {
         { // action
             {"Mad Max: Fury Road", 120, 8.1},
             {"John Wick", 110, 7.4},
@@ -21,8 +21,9 @@ int main() {
             {"The Tomorrow War", 132, 6.6},
             {"Red One", 124, 6.3},
             {"The Beekeeper", 105, 6.3}
+            {"Top Gun", 109, 7.0}
         },
-        { // aomedy
+        { // comedy
             {"Borderlands", 100, 4.7},
             {"Paul", 99, 6.9},
             {"Jumanji: The Next Level", 118, 6.6},
@@ -33,6 +34,7 @@ int main() {
             {"Men In Black", 98, 7.3},
             {"The 40-Year-Old Virgin", 111, 7.1},
             {"Ted", 101, 6.9}
+            {"Weekend at Bernie's", 97, 6.4}
         },
         { // drama
             {"The Magnificent Seven", 127, 6.9},
@@ -45,6 +47,7 @@ int main() {
             {"Rocky", 114, 8.1},
             {"Samaritan", 102, 5.7},
             {"Everest", 116, 7.1}
+            {"The Godfather", 175, 9.2}
         },
         { // horror
             {"The Conjuring", 112, 7.5},
@@ -57,6 +60,7 @@ int main() {
             {"Tarot", 88, 4.8},
             {"Khanzab", 104, 4.6},
             {"KKN di Desa Penari: Luwih Dowo, Luwih Medeni", 175, 5.9}
+            {"American Psycho", 102, 7.6}
         },
         { // sci-fi
             {"Pacific Rim Uprising", 103, 5.6},
@@ -69,6 +73,7 @@ int main() {
             {"Hellboy", 116, 6.9},
             {"Back To The Future", 111, 8.5},
             {"Godzilla", 133, 5.5}
+            {"Blade Runner 2049", 164, 8.0}
         },
         { // romance
             {"The Notebook", 123, 7.8},
@@ -81,6 +86,7 @@ int main() {
             {"To All the Boys I've Loved Before", 99, 7.1},
             {"Notting Hill", 124, 7.2},
             {"The Fault in Our Stars", 126, 7.7}
+            {"Forrest Gump", 144, 8.8}
         }
     };
     while (true) {//while loop to repeat the genre selection
