@@ -105,7 +105,7 @@ int main() {
                 cout << "---------------------------------------------\n";
             }
         } else {
-            cout << "\nInvalid choice. Please select a number between 1 and 5.\n";// error message if user selects a number other than 1 - 5
+            cout << "\nInvalid choice. Please select a number between 1 and 6.\n";// error message if user selects a number other than 1 - 5
         }
         char continueOption;
         cout << "\nWould you like to explore another category? Yes = (y)  No = (n) : ";
